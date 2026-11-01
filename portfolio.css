@@ -1,0 +1,268 @@
+
+:root {
+  --bg: #161718;
+  --accent: #ff7a50;
+  --text: #ffffff;
+  --muted: #b8b8b8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Playfair Display", Georgia, serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 30px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  border: 1px solid var(--accent);
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: #5a4038;
+  color: var(--text);
+}
+
+/* ===== navbar ===== */
+.navbar {
+  padding: 20px 6%;
+  border-bottom: 1px solid #2a2b2d;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+/* ===== hero css ===== */
+/* text + photo sit together in one gradient box */
+.hero-container {
+  margin: 60px 0;
+  padding: 60px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #2f2d31 0%, #121212 55%, #d4c7c8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-left-container {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.hero-hello {
+  font-size: 20px;
+}
+
+.hero-container h1 {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.hero-container .name,
+.hero-container .highlight {
+  color: #ffd36e;
+}
+
+.hero-text {
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 460px;
+}
+
+.hero-container .btn {
+  background: #fff;
+  border-color: #fff;
+  color: #6a1fd1;
+}
+
+.hero-container .btn-outline {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.7);
+  color: #fff;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-right-container {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-right-container {
+  align-self: flex-end;
+  margin-bottom: -60px;
+}
+
+.photo-frame {
+  width: 380px;
+}
+
+.photo-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ===== service css ===== */
+.service-container {
+  margin-bottom: 60px;
+  padding: 60px 40px;
+  border-radius: 24px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.service-container h1 {
+  font-size: 48px;
+  color: #522c7d;
+  margin-bottom: 40px;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  padding: 16px 16px 28px;
+  border-radius: 0;
+  background: #85766a;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  text-align: left;
+}
+
+.service-card i {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 0;
+  border: 2px solid #ffc400;
+  background: #8a4a1c;
+  color: #ffc400;
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+
+.service-card h4 {
+  font-size: 20px;
+  color: #ffe100;
+  margin-bottom: 24px;
+}
+
+.service-card p {
+  font-size: 15px;
+  color: #fff;
+}
+
+
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 24px;
+    margin: 30px 0;
+  }
+
+  .hero-left-container,
+  .hero-right-container {
+    width: 100%;
+    align-items: center;
+  }
+
+  .hero-right-container {
+    align-self: stretch;
+    margin-bottom: -40px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-container h1 {
+    font-size: 44px;
+  }
+
+  .service-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-container h1 {
+    font-size: 36px;
+  }
+
+  .photo-frame {
+    width: 280px;
+  }
+
+  .service-container {
+    padding: 40px 20px;
+  }
+
+  .service-container h1 {
+    font-size: 36px;
+  }
+
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 400px) {
+  .hero-container {
+    flex-direction: column;
+  }
+
+  .hero-container h1 {
+    font-size: 28px;
+  }
+
+  .photo-frame {
+    width: 220px;
+  }
+}
